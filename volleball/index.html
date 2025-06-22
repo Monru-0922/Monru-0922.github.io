@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>排球系隊介紹</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Lato:wght@300;400;700;900&family=Noto+Sans+TC:wght@300;400;700&display=swap');
+   </style>
+
+</head>
+<body>
+  <header>
+    <div class="logo">VolleyTeam</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">入隊規則</a></li>
+        <li><a href="#gallery">比賽照片</a></li>
+        <li><a href="#videos">影片紀錄</a></li>
+        <li><a href="#contact">聯絡方式</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>國立臺灣藝術大學視覺傳球設計學系</h1>
+      <p>我們是來自視傳系的排球隊，歡迎加入我們的行列！</p>
+    </section>
+
+    <section id="about">
+      <h2>入隊規則</h2>
+    <p>
+     ➊ 入隊須繳交新台幣 360 元隊費，且只需繳交一次，支出包含器材購買及維護。（不含部分比賽費用）<br>
+     ➋ 教練費每月收取，當月練球時數 x 教練時薪 / 所有隊員，以 113-1 為例約每人 200 - 300 元。<br>
+     ➌ 本學期練球時段為 每週二、三 18:30-22:00。有需要可請假，但非必要盡量不要臨時請假（一週前）。<br>
+     ＊當學期練球時段以已確定入隊隊員投票決定。<br>
+     ➍ 本學期招生至 9/30<br>
+     ➎ 確定要入隊或想先來適應週都請先填表單，讓我們認識你 *ଘ(੭*ˊᵕˋ)੭* ੈ✩‧₊˚<br>
+     <br>
+     最後，雖然系隊是開心打球的性質，但還是請帶著要認真學習的心態來練球，相信你們都會收穫滿滿！
+     </p>
+    </section>
+
+    <section id="gallery">
+     <h2>比賽照片</h2>
+     <div class="carousel">
+      <button class="carousel-btn prev" onclick="prevSlide()">‹</button>
+      <div class="carousel-window">
+      <div class="carousel-track">
+      <img src="image/01.jpg" alt="比賽照片1" />
+      <img src="image/02.jpg" alt="比賽照片2" />
+      <img src="image/03.jpg" alt="比賽照片3" />
+      <img src="image/04.jpg" alt="比賽照片4" />
+      <img src="image/05.jpg" alt="比賽照片5" />
+      <img src="image/06.jpg" alt="比賽照片6" />
+      <img src="image/07.jpg" alt="比賽照片7" />
+      <img src="image/08.jpg" alt="比賽照片8" />
+      <img src="image/09.jpg" alt="比賽照片9" />
+      <img src="image/10.jpg" alt="比賽照片10" />
+     </div>
+     </div>
+     <button class="carousel-btn next" onclick="nextSlide()">›</button>
+     </div>
+     </section>
+
+     <section id="videos">
+      <h2>影片紀錄</h2>
+      <div class="video-preview" onclick="loadVideo()">
+       <img src="https://img.youtube.com/vi/uqS9gUnhz4I/hqdefault.jpg" alt="影片縮圖">
+      <div class="play-button">▶</div>
+      </div>
+      <div class="video-container" id="videoContainer"></div>
+    </section>
+
+
+    <section id="contact">
+      <h2>聯絡我們</h2>
+      <p>Email: volleyball@design.edu.tw</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 VolleyTeam 視傳排球隊</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

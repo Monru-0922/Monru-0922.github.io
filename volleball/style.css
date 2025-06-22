@@ -1,0 +1,224 @@
+/*  共用設定 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-family: 'Lato', 'Noto Sans TC', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-break: anywhere;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Caprasimo', 'Noto Sans TC', cursive;
+}
+
+blockquote, .quote {
+  font-family: 'New Tegomin', 'Noto Serif TC', serif;
+}
+
+/* 導覽列*/
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/*漢堡選單*/
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/*主視覺區塊*/
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/*內容區塊*/
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 輪播照片區（比賽照片用）*/
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.carousel-window {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-track {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: calc(100% / 2);
+  border-radius: 8px;
+  padding: 0.25rem;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* 影片區塊 */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 1rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.video-preview {
+  position: relative;
+  cursor: pointer;
+  max-width: 800px;
+  margin: 1rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.video-preview img {
+  width: 100%;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  pointer-events: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+/* 響應式設定 RWD*/
+@media (max-width: 768px) {
+
+    .nav-links a {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 150px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .carousel-track img {
+    width: 100%; /* 手機版一張 */
+  }
+}
