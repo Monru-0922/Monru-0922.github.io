@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>互動裝置：按鈕觸發相機 → 年齡分流</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>互動裝置：按鈕觸發相機 → 年齡分流</header>
+
+  <div class="wrap">
+    <div class="toolbar">
+      <button id="triggerBtn" class="big">🔴 實體按鈕</button>
+      <button id="stopBtn" disabled>停止相機</button>
+    </div>
+
+    <div class="frame">
+      <div id="hud" class="hud">待機</div>
+      <video id="video" playsinline autoplay muted></video>
+      <canvas id="overlay"></canvas>
+    </div>
+
+    <div class="log" id="log"></div>
+  </div>
+
+  <!-- face-api.js CDN -->
+  <script src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <!-- 你的主程式 -->
+  <script src="script.js"></script>
+</body>
+</html>
